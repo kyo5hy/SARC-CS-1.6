@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SARC IFC Brusque 2026 — Torneio LAN de Counter-Strike 1.6</title>
+<meta name="description" content="Torneio LAN de Counter-Strike 1.6 no IFC Campus Brusque. Monte seu trio, conheça as regras e inscreva sua equipe.">
+<meta name="theme-color" content="#0a0e08">
+<meta property="og:title" content="SARC IFC Brusque 2026 — Torneio LAN de CS 1.6">
+<meta property="og:description" content="Monte seu trio. Entre na LAN. Inscreva sua equipe no torneio de Counter-Strike 1.6 do IFC Brusque.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l12 7v14l-12 7L4 23V9z' fill='%230a0e08' stroke='%23ffb000' stroke-width='2'/%3E%3Cpath d='M16 8v16M8 16h16' stroke='%23ffb000' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.className+=" js";</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="logo" viewBox="0 0 40 40"><path d="M20 2l15 8.7v18.6L20 38 5 29.3V10.7z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M20 9v8M20 23v8M9 20h8M23 20h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="20" r="2" fill="currentColor"/></symbol>
+  <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+
+<noscript><p style="padding:20px;text-align:center;color:#ffb000;font-family:sans-serif">Ative o JavaScript para ver esta página.</p></noscript>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<div id="splash" aria-live="polite">
+  <div class="splash-box">
+    <svg class="splash-logo" aria-hidden="true"><use href="#logo"/></svg>
+    <p class="mono amber">&gt; Conectando ao servidor...</p>
+    <div class="load"><i></i></div>
+    <button id="skip" class="ghost" type="button">Pular</button>
+  </div>
+</div>
+
+<header id="top">
+  <div class="wrap hd">
+    <a class="brand" href="#hero" aria-label="SARC CS 1.6 — início"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>SARC</b> CS 1.6</span></a>
+    <button id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#evento">Evento</a>
+      <a href="#como">Como funciona</a>
+      <a href="#participar">Participar</a>
+      <a href="#regras">Regras</a>
+      <a href="#premio">Prêmio</a>
+      <a class="btn sm" data-inscricao href="#inscricao" target="_blank" rel="noopener">Inscrever</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <div class="floor" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="copy">
+      <p class="badge rv"><i class="dot"></i><span id="h-sub"></span></p>
+      <h1 class="rv" aria-label="SARC IFC Brusque 2026"><span class="h1a" aria-hidden="true">SARC</span><span class="h1b" aria-hidden="true">IFC Brusque <em>2026</em></span></h1>
+      <p class="tagline rv">Monte seu trio. <b>Entre na LAN.</b></p>
+      <ul class="chips rv" id="h-chips"></ul>
+      <div class="cta-row rv">
+        <span class="glow" id="hero-cta"><a class="btn big shine" data-inscricao href="#inscricao" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#bolt"/></svg>Inscrever minha equipe</a></span>
+        <a class="ghost" href="#evento">Conheça o evento ↓</a>
+      </div>
+      <div class="cd rv" aria-label="Contagem regressiva para o evento">
+        <p class="mono lbl"><span>Início da operação</span><span id="h-data"></span></p>
+        <div class="boxes" id="count"></div>
+      </div>
+    </div>
+
+    <div class="scene" id="scene" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="rig" id="rig">
+        <svg class="xh" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle cx="60" cy="60" r="34" stroke-dasharray="4 6"/><path d="M60 4v26M60 90v26M4 60h26M90 60h26"/></svg>
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="bob"><div class="cube">
+          <div class="face f1"><span>SARC</span></div>
+          <div class="face f2"><span>3x3</span></div>
+          <div class="face f3"><span>LAN</span></div>
+          <div class="face f4"><span>CS 1.6</span></div>
+          <div class="face f5"><span>2026</span></div>
+          <div class="face f6"><span>IFC</span></div>
+        </div></div>
+        <b class="t3d ct">CT</b>
+        <b class="t3d tr">TR</b>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="track" id="marq"></div></div>
+
+<!-- ============ OBJETIVO ============ -->
+<section id="evento" class="sec" aria-labelledby="t-obj">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow rv"><b>01</b><i></i><span>O objetivo</span></p>
+      <h2 class="rv" id="t-obj"></h2>
+      <div class="prose rv" id="o-txt"></div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section id="como" class="sec" aria-labelledby="t-como">
+  <div class="wrap">
+    <p class="eyebrow rv"><b>02</b><i></i><span>Plano de operação</span></p>
+    <h2 class="rv" id="t-como">Como funciona</h2>
+    <ol class="tl" id="timeline"></ol>
+  </div>
+</section>
+
+<!-- ============ PARTICIPAR ============ -->
+<section id="participar" class="sec" aria-labelledby="t-part">
+  <div class="wrap">
+    <p class="eyebrow rv"><b>03</b><i></i><span>Recrutamento</span></p>
+    <h2 class="rv" id="t-part">Como participar</h2>
+    <ol class="steps" id="steps"></ol>
+    <p class="mid rv"><span class="glow" id="mid-cta"><a class="btn big shine" data-inscricao href="#inscricao" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#bolt"/></svg>Inscrever minha equipe</a></span></p>
+  </div>
+</section>
+
+<!-- ============ REGRAS ============ -->
+<section id="regras" class="sec" aria-labelledby="t-reg">
+  <div class="wrap">
+    <p class="eyebrow rv"><b>04</b><i></i><span>Regras de combate</span></p>
+    <h2 class="rv" id="t-reg">Regras</h2>
+    <div class="grid" id="rules"></div>
+  </div>
+</section>
+
+<!-- ============ PRÊMIO ============ -->
+<section id="premio" class="sec" aria-labelledby="t-pr">
+  <div class="wrap">
+    <div class="prize rv" data-tilt>
+      <svg class="trophy" viewBox="0 0 100 110" aria-hidden="true"><defs><linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#c98a00"/></linearGradient></defs><path d="M28 10h44v30a22 22 0 0 1-44 0z" fill="url(#gd)" stroke="#7a4f00" stroke-width="3"/><path d="M28 18H12c0 18 8 26 20 28M72 18h16c0 18-8 26-20 28" fill="none" stroke="#e0a800" stroke-width="5"/><rect x="44" y="62" width="12" height="20" fill="#d99b00"/><rect x="28" y="82" width="44" height="12" rx="2" fill="url(#gd)" stroke="#7a4f00" stroke-width="3"/><rect x="22" y="94" width="56" height="10" rx="2" fill="#7a4f00"/></svg>
+      <div>
+        <p class="mono amber">Recompensa</p>
+        <h2 id="t-pr">Premiação</h2>
+        <p class="lead" id="premio-txt"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSCRIÇÃO ============ -->
+<section id="inscricao" class="final" aria-labelledby="t-ins">
+  <div class="wrap">
+    <div class="final-box rv">
+      <p class="mono amber">Vagas limitadas</p>
+      <h2 id="t-ins">Sua equipe está pronta?</h2>
+      <p class="lead">Inscreva sua equipe no SARC IFC Brusque 2026.</p>
+      <span class="glow"><a class="btn big shine" data-inscricao href="#inscricao" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#bolt"/></svg>Inscrever minha equipe</a></span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <p class="flogo"><svg aria-hidden="true"><use href="#logo"/></svg>SARC IFC BRUSQUE 2026</p>
+      <p class="mute">IFC — Campus Brusque</p>
+    </div>
+    <p class="mono links"><a data-inscricao href="#inscricao" target="_blank" rel="noopener">Inscrição</a><a id="f-ig" hidden target="_blank" rel="noopener">Instagram</a><a id="f-ct" hidden>Contato</a><a href="#hero">Voltar ao topo</a></p>
+  </div>
+  <p class="wrap legal">Projeto independente, sem vínculo com a Valve. Counter-Strike é marca de seus respectivos titulares.</p>
+</footer>
+
+<a id="sticky" class="btn big" data-inscricao href="#inscricao" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#bolt"/></svg>Inscrever minha equipe</a>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
