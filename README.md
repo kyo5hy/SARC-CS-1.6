@@ -1,36 +1,87 @@
-# SARC IFC Brusque 2026 — Landing page
 
-Página 100% estática (HTML, CSS e JavaScript puro) para divulgar o torneio e levar o visitante ao formulário de inscrição. Sem backend, sem banco de dados, sem build, sem bibliotecas.
+# ⚡ SARC CS 2026
 
-## 1. Abrir localmente
-Dê dois cliques em `index.html`.
+**Repositório oficial para os materiais, códigos e interface da Semana Acadêmica do Curso de Tecnologia em Redes de Computadores (SARC) - Edição 2026.**
 
-## 2. O que editar
-**Tudo fica em `js/config.js`.** Não é preciso mexer nos outros arquivos.
+<br>
 
-| O que mudar | Variável |
-|---|---|
-| Nome, local, data, Instagram, contato | `EVENTO` |
-| Contagem regressiva | `EVENTO.dataISO` (ex.: `"2026-11-15T09:00:00-03:00"`; vazio mostra "Em breve") |
-| Link do formulário (Google Forms) | `URL_INSCRICAO` |
-| Texto do objetivo | `OBJETIVO` |
-| Premiação | `PREMIO` |
-| **Campeão (coroa 3D)** | `CAMPEAO` — preencha `equipe` e os 3 `jogadores` ao fim do evento; fica na coroa para sempre |
-| Etapas do evento | `ETAPAS` |
-| Passos para se inscrever | `PASSOS` |
-| Regras | `REGRAS` |
+<p align="center">
+  <img src="https://img.shields.io/badge/STATUS-EM_DESENVOLVIMENTO-brightgreen?style=for-the-badge">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white">
+</p>
 
-Mantenha as aspas e as vírgulas ao editar.
+---
 
-## 3. Publicar no GitHub Pages
-1. Crie um repositório no GitHub e envie o conteúdo desta pasta (com `index.html` na raiz).
-2. Vá em **Settings → Pages**.
-3. Em **Source**, escolha **Deploy from a branch**, branch `main`, pasta `/ (root)`.
-4. Aguarde alguns minutos e acesse o endereço mostrado.
+## 📖 Sobre o Projeto
 
-Para atualizar qualquer informação: edite `js/config.js`, faça commit e aguarde a publicação.
+O **SARC CS 2026** agrupa os recursos web, scripts dinâmicos de configuração e páginas informativas desenvolvidas para apoiar as atividades, palestras, oficinas e programações da Semana Acadêmica do curso superior de Tecnologia em Redes de Computadores. 
 
-## Observações
-- As fontes vêm do Google Fonts. Sem internet, o navegador usa fontes de reserva e a página continua funcionando.
-- O diorama 3D do deserto (construções de arenito, caixotes, sítios A e B), o céu, as dunas e a poeira são CSS, SVG e canvas puros, sem imagens nem assets da Valve. É uma cena original inspirada no estilo, não uma cópia de mapa.
-- Com "reduzir movimento" ativado no sistema, as animações pesadas são desligadas.
+O projeto conta com uma interface web leve e responsiva, estruturada para divulgar a programação do evento e integrar componentes interativos no frontend.
+
+---
+
+## ✨ Funcionalidades
+
+- 📄 **Página Institucional Dinâmica:** Apresentação limpa e moderna voltada para o evento acadêmico.
+- ⚙️ **Configurações Modularizadas:** Arquivos dedicados (`config.js`) para gerenciar dados, rotas ou parâmetros dinâmicos da interface.
+- 🎨 **Estilização Responsiva:** Layout adaptado para diferentes tamanhos de tela (desktop e dispositivos móveis).
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5:** Estrutura semântica das páginas.
+- **CSS3:** Estilização visual, layout e responsividade (`style.css`).
+- **JavaScript (ES6+):** Lógica de comportamento da interface e manipulação de parâmetros (`app.js`, `config.js`).
+
+---
+
+## 📂 Estrutura do Repositório
+
+```text
+sarc-cs-2026/
+├── css/
+│   └── style.css       # Folha de estilos principal da aplicação
+├── js/
+│   ├── app.js          # Lógica principal de interatividade do frontend
+│   └── config.js       # Arquivo de configuração e parâmetros globais
+└── index.html          # Página principal (Home) da SARC 2026
+
+```
+
+---
+
+## 🚀 Como Executar Localmente
+
+Como se trata de um projeto web estático, você pode executá-lo diretamente no seu navegador ou utilizando uma extensão de servidor local (como o *Live Server* do VS Code):
+
+1. **Clone o repositório:**
+```bash
+git clone [https://github.com/SEU-USUARIO/sarc-cs-2026.git](https://github.com/SEU-USUARIO/sarc-cs-2026.git)
+cd sarc-cs-2026
+
+```
+
+
+2. **Abra o projeto:**
+* Dê um duplo clique no arquivo `index.html` para abrir diretamente no navegador, **ou**
+* Abra a pasta no **VS Code** e clique em *Go Live* para iniciar um servidor de desenvolvimento local.
+
+
+
+---
+
+## 👨‍💻 Contexto Acadêmico
+
+Desenvolvido no âmbito do **Instituto Federal Catarinense (IFC) - Campus Brusque**, integrando a comunidade acadêmica do curso de Tecnologia em Redes de Computadores.
+
+---
+
+> ⭐ Se este projeto foi útil para o evento, considere deixar uma estrela no repositório!
+
+```
+
+```
