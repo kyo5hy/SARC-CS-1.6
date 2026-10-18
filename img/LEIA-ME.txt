@@ -1,0 +1,1 @@
+Fotos do evento: coloque aqui (ex.: evento1.jpg, evento2.jpg, evento3.jpg) e liste em js/config.js > FOTOS_EVENTO. Ideal 4:3.
